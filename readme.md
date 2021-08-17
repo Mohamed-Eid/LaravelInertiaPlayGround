@@ -1,12 +1,5 @@
 ## Installation
 
-Clone the repo locally:
-
-```sh
-git clone https://github.com/landish/pingcrm-react.git
-cd pingcrm-react
-```
-
 Install PHP dependencies:
 
 ```sh
