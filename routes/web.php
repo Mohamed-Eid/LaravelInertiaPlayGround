@@ -28,6 +28,12 @@ Route::put('users/{user}')->name('users.update')->uses('UsersController@update')
 Route::delete('users/{user}')->name('users.destroy')->uses('UsersController@destroy')->middleware('auth');
 Route::put('users/{user}/restore')->name('users.restore')->uses('UsersController@restore')->middleware('auth');
 
+
+Route::get('notes')->name('notes')->uses('NotesController@index')->middleware('remember', 'auth');
+Route::get('notes/create')->name('notes.create')->uses('NotesController@create')->middleware('remember', 'auth');
+Route::post('notes')->name('notes.store')->uses('NotesController@store')->middleware('remember', 'auth');
+
+
 // Images
 Route::get('/img/{path}', 'ImagesController@show')->where('path', '.*');
 
